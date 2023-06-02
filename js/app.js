@@ -11,17 +11,25 @@ function esconder(){
     }
 }
 function maximizarMenu(element, content, foto, perfil){
-
     element.style.width = '500px';
     content.style.marginLeft = '500px';
     
     foto.style.width = '200px';
     foto.style.height = '200px';
     perfil.hidden = false;
+    var a = document.getElementsByTagName('h6');
+    for (i=0;i<a.length;i++){
+        a[i].hidden = false;
+    }
+
 
     
 }
 function minimizarMenu(element, content, foto, perfil){
+    var a = document.getElementsByTagName('h6');
+    for (i=0;i<a.length;i++){
+        a[i].hidden = true;
+    }
     perfil.hidden = true;
     content.style.marginLeft = '150px';
     element.style.width = '150px';
